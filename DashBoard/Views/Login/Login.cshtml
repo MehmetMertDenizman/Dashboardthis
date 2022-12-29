@@ -1,0 +1,19 @@
+﻿@addTagHelper *, Microsoft.ApsNetCore.Mvc.TagHelpers
+@model (DashBoard.Models.User, DashBoard.Models.Restaurant )
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+<div class="login"> 
+    <form asp-action="Login" asp-controller="Login" method="post">
+        <p>Username</p>
+        <input type="text" asp-for="Item1.Username" />
+        <p>Password</p>
+        <input type="password"  asp-for="Item1.Password" />      
+        <p>Restaurant Title</p>
+        <input type="text"  asp-for="Item2.Title" />
+        <input type="checkbox" class="checkbox" />
+        <input type="submit" value="a" />
+        </form>  
+        </div>

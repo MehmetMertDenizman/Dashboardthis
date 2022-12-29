@@ -5,18 +5,10 @@ namespace DashBoard.Models
 {
     public class User : BaseEntity
     {
-        //[DisplayName("Name"),DataType(DataType.Text)]
-        //public string? Name { get; set; }
-        //[DisplayName("Surname"),DataType(DataType.Text)]
-        //public string? Surname { get; set; }
-        //[ DataType(DataType.Password),DisplayName("Password")]
-        //public string? Password { get; set; }
-        //[DisplayName("Email"),DataType(DataType.EmailAddress)]
-        //public string? Email { get; set; }
-        //[DisplayName("Dogum Tarihi"), DataType(DataType.DateTime)]
-        //public DateTime BirthDate{ get; set; }
 
 
+        [Required(ErrorMessage ="Boş geçemen useradını")]
+        [StringLength(15, ErrorMessage ="Max 15 karakter")]
         public string? Username { get; set; }
         public string? Firstname { get; set; }
         public string? Lastname { get; set; }
